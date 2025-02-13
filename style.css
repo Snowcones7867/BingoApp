@@ -1,0 +1,120 @@
+body {
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #d3e1f4;
+    font-family: Tahoma, sans-serif;
+}
+
+.circle-container {
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+    gap: 20px; /* Space between circles */
+    top: 10000px; /*There's probably a better way to do this but idc*/
+    /*left: 50%;
+    transform: translateX(-50%);*/
+}
+
+.container, .container2, .container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    background-color: gray;
+    pointer-events: none;
+}
+
+.container {
+    height: 280px;
+    width: 280px;
+}
+
+.container2 {
+    height: 200px;
+    width: 200px;
+}
+
+.container3 {
+    height: 150px;
+    width: 150px;
+}
+
+.displayCircle {
+    height: 100%;
+    width: 100%;
+}
+
+.displayNum {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: #00aaff;
+    /*color: #443BBA;*/
+    font-size: 50px;
+    text-shadow: 4px 4px 4px #ffffff;
+    z-index: 1;
+}
+
+.controls, h1, #sampleRow {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bingo {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+#eagle1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 111px;
+    width: 125px;
+    z-index: 1;
+}
+
+#eagle2 {
+    position: absolute;
+    top: 30px;
+    left: 600px;
+    height: 65px;
+    width: 168px;
+    z-index: 1;
+}
+
+.buttons {
+    display: fixed;
+    position: fixed;
+    right: 20px;
+    width: 90px;
+}
+
+#playPauseButton {
+    bottom: 20px;
+}
+
+#newRoundButton {
+    bottom: 100px;
+}
+
+#slider {
+    bottom: 200px;
+}
+
+
+/*#FFFFFF white
+# gold
+#A91616 red
+#443BBA blue
+*/

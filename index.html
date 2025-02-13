@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!--<h1>Welcome to BINGO<br></h1>-->
+    
+    
+    <div class="circle-container">
+        <div class="container">
+            <img class="displayCircle" id="displayCircle1" src="assets/CircleThingSelected.png" alt="circle selected">
+            <h1 class="displayNum" id="displayNum1">##</h1> 
+        </div>
+    
+        <div class="container2">
+            <img class="displayCircle" id="displayCircle2" src="assets/CircleThingSelected.png" alt="circle selected">
+            <h1 class="displayNum" id="displayNum2">##</h1> 
+        </div>
+    
+        <div class="container3">
+            <img class="displayCircle" id="displayCircle3" src="assets/CircleThingSelected.png" alt="circle selected">
+            <h1 class="displayNum" id="displayNum3">##</h1> 
+        </div>
+    </div>
+    
+    <div id="sampleRow"></div>
+    
+    <img class="buttons" id="playPauseButton" src="assets/play-button.gif">
+    <img class="buttons" id="newRoundButton" src="assets/newround-button.gif">
+    
+    <!--<input class="controls" id="playPauseButton" type="button" value="Play"/>-->
+    <!--<input class="controls" id="newButton" type="button" value="New Round"/>-->
+    <p class="controls"></p>
+
+    <input class="buttons" id="slider" type="range" min="0.1" max="30" value="6"/>
+    <select class="controls" id="select">
+        <option value="Regular">Regular</option>
+        <option value="X">X</option>
+        <option value="BlackOut">Black Out</option>
+        <option value="O">O</option>
+        <option value="C">C</option>
+        <option value="H">H</option>
+        <option value="S">S</option>
+    </select>
+    <img class="controls" id="bingo" src="assets/Regular.gif">
+    
+    <img class="decor" id="eagle1" src="assets/eagle1.gif">
+    <img class="decor" id="eagle2" src="assets/eagle2.gif">
+    
+    <audio id="ding" src="https://codehs.com/uploads/223675bbb18f667cf7e772ee697e2558"></audio>
+    
+    <script src = "script.js"></script> 
+    
+
+    
+    
+</body>

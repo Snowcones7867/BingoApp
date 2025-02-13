@@ -1,0 +1,76 @@
+<input id="testMultipleButton" type="button" value="Test a lot of rounds"/>
+    <p></p>
+
+const testMultipleButton = document.getElementById('testMultipleButton');
+testMultipleButton.addEventListener('click', testMultiple);
+
+function testMultiple() {
+    let runs = 0;
+    let resets = 0;
+    let notRepeating = 0;
+    let notSkipping = 0;
+    let trials = 10000; // edit as needed
+    for (let i = 0; i < trials; i++) { // runs n number of times
+        let results = testOne(false);
+        runs++
+        if (results[0] == true) {
+            resets++;
+        }
+        if (results[1] == true) {
+            notRepeating++;
+        }
+        if (results[2] == true) {
+            notSkipping++;
+        }
+    }
+    //spits out stats
+    console.log(resets + " - total rounds")
+    console.log(resets + " - number of resets");
+    console.log((trials - notRepeating) + " - number of repeats");
+    console.log((trials - notSkipping) + " - number of skips");
+}
+
+function testOne(display) { // single test
+    if (display) {
+        console.log("Testing 1 round...");
+    }
+    let isReset = true;
+    let noRepeats = true;
+    let noSkips = true;
+    
+    generate();
+    for (let i = 0; i < 75; i++) { 
+        if (selected[i] === true) { // checks for reset
+            isReset = false;
+        }
+    }
+    
+    const bingosSorted = bingos.sort();
+    if (display) {
+        console.log("Output: Single Run\n\nCalled:\n");
+        console.log(bingosSorted);
+    }
+    
+    let bingosSortedNums = [];
+    for (let i = 0; i < bingosSorted.length; i++) {
+        bingosSortedNums[i] = bingosSorted[i].slice(1);
+    }
+    //console.log(bingosSortedNums);
+    bingosSortedNums = bingosSortedNums.sort(function (a, b) {  return a - b;  });
+    
+    for (let i = 0; i < bingos.length - 1; i++) {
+        if (parseInt(bingosSorted[i].slice(1)) === parseInt(bingosSorted[i + 1].slice(1))) {
+            noRepeats = false;
+        }
+        if (bingosSortedNums[i + 1] - bingosSortedNums[i] > 1) {
+            noSkips = false;
+        }
+    }
+    if (display) {
+        console.log(isReset + " - full reset");
+        console.log(noRepeats + " - no repeats");
+        console.log(noSkips + " - no skips");
+    }
+    
+    return [isReset, noRepeats, noSkips];
+}
