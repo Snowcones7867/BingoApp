@@ -58,7 +58,7 @@ function generateCircles() {
             var n = (15 * j ) + i + 1;
             var circles  = document.createElement("img"); // setAttribute()?
             circles.id = "circle" + n ;
-            circles.src = "assets/CircleThingUnselected.png"; 
+            circles.src = "https://codehs.com/uploads/176540e66397bf0b3201f4bb9a7449fd"; 
             
 
             var text = document.createElement("h1");
@@ -97,7 +97,7 @@ function newRound() {
         for (var l = 0; l < 15; l++) {
             var n = (15 * k ) + l + 1;
             var circleSelected = document.getElementById('circle' + n);
-            circleSelected.src = "assets/CircleThingUnselected.png"; 
+            circleSelected.src = "https://codehs.com/uploads/176540e66397bf0b3201f4bb9a7449fd"; 
             document.getElementById('text' + n).style.color = "#000000";
         }
     }
@@ -153,13 +153,13 @@ function oneRound() {
     displayNum3.textContent = nums[round - 2];
     var n = nums[round].replace(/\D/g, "");
     var circleSelected = document.getElementById('circle' + n);
-    circleSelected.src = "assets/CircleThingSelected.png"; 
+    circleSelected.src = "https://codehs.com/uploads/83ef29afa8558ba9ae2ab2ebd2cd42ee"; 
     document.getElementById('text' + n).style.color = "#ffffff";
     round++;
 }
 
 function play() {
-    playButton.src = "assets/pause-button.gif";
+    playButton.src = "https://codehs.com/uploads/6d3d84f1f59427d5c3d36d85d7ebba43";
     var interval = slider.value * 100;
     console.log(interval);
     clearInterval(myInterval);
@@ -168,7 +168,7 @@ function play() {
 }
 
 function pause() {
-    playButton.src = "assets/play-button.gif";
+    playButton.src = "https://codehs.com/uploads/e36fe109f38592ab93dc1bcee09307e7";
     clearInterval(myInterval);
     console.log("Paused");
 }
@@ -212,25 +212,25 @@ function changeBingo() {
     selectElement = document.querySelector('select');
     var choice = selectElement.value;
     if(choice == 'Regular'){
-        bingo.src = "assets/Regular.gif"; 
+        bingo.src = "https://codehs.com/uploads/09d13bf6208a2925ac6d4b88982fbea5"; 
     }
     if(choice == 'X'){
-        bingo.src = "assets/X.gif"; 
+        bingo.src = "https://codehs.com/uploads/c904ea35bb10c56df0d02e3fd863a3e1"; 
     }
     if(choice == 'BlackOut'){
-        bingo.src = "assets/BlackOut.gif"; 
+        bingo.src = "https://codehs.com/uploads/0f61dd722a2f523e1461b3b893f3ea79"; 
     }
     if(choice == 'O'){
-        bingo.src = "assets/O.gif"; 
+        bingo.src = "https://codehs.com/uploads/eb570b28149d2bb2a8da08899374f012"; 
     }
     if(choice == 'C'){
-        bingo.src = "assets/C.gif"; 
+        bingo.src = "https://codehs.com/uploads/848acd7ca5eec54bd69c186cf5ec5497"; 
     }
     if(choice == 'H'){
-        bingo.src = "assets/H.gif"; 
+        bingo.src = "https://codehs.com/uploads/9cc45244559e90c275e6d95cfa85857b"; 
     }
     if(choice == 'S'){
-        bingo.src = "assets/S.gif"; 
+        bingo.src = "https://codehs.com/uploads/4d507502597b6ec97f1fdd7065d7e1e4"; 
     }
 }
 
